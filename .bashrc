@@ -22,7 +22,8 @@ man() {
 
 
 # prompt
-PS1='\[\e[90m\][\u@\h \W]\[\e[m\]\$ '
+source /usr/share/git/completion/git-prompt.sh
+PS1='\[\e[90m\][\u@\h \W$(__git_ps1)]\[\e[m\]\$ '
 
 
 # motd
