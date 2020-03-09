@@ -25,6 +25,10 @@ man() {
 PS1='\[\e[90m\][\u@\h \W]\[\e[m\]\$ '
 
 
+# motd
+shopt -q login_shell || cat ~/.motd
+
+
 # needed for dotfile repository
 # reference: https://git.rwth-aachen.de/celina.kalus/dotfiles.git
 alias config='/usr/bin/git --git-dir=/home/celina/.cfg/ --work-tree=/home/celina'
