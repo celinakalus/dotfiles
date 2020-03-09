@@ -10,7 +10,7 @@
 " ===== PLUGINS =====
 
 " NERDTree: tree view explorer
-:Plugin 'scrooloose/nerdtree'
+:Plugin 'preservim/nerdtree'
 
 " buftabline: displays all buffers in the tabline
 :Plugin 'ap/vim-buftabline'
