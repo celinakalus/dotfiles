@@ -20,6 +20,14 @@ config checkout
 * interactive bash session prints a gay pride flag at the start
 * colored bash prompt with git branch indicator
 
+### zsh
+#### Requirements
+* [zsh](https://www.zsh.org/)
+
+#### Features
+* `ls` and `man` commands use colored highlighting
+* colored zsh prompt with git branch indicator
+
 ### VIM
 #### Requirements
 * [vim](https://www.vim.org/)
@@ -36,3 +44,10 @@ config checkout
 * normal mode: switch between buffers using [SHIFT]-[LEFT] and [SHIFT]-[RIGHT]
 * normal mode: switch between windows using [CTRL]-[SHIFT]-[LEFT] and [CTRL]-[SHIFT]-[RIGHT]
 * misc
+
+### Dunst
+#### Requirements
+* [dunst](https://dunst-project.org/)
+
+#### Features
+* grey/black color scheme
