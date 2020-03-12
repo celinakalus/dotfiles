@@ -22,7 +22,7 @@ man() {
 
 
 # prompt
-source /usr/share/git/completion/git-prompt.sh
+source $HOME/.local/bin/git-prompt.sh
 PS1='\[\e[93m\]\u\[\e[0m\]@\[\e[94m\]\h \[\e[92m\]\W\[\e[91m\]$(__git_ps1) \[\e[m\]\$ '
 
 

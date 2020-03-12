@@ -9,6 +9,7 @@ alias ls='ls --color=auto'
 
 
 # prompt
+source $HOME/.local/bin/git-prompt.sh
 setopt PROMPT_SUBST
 #PS1="%* %F{8}[%n@%m:%~]%f%# "
 PS1='%F{11}%n%f@%F{12}%m%f %F{10}%c%f%F{9}$(__git_ps1)%f %# '
