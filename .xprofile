@@ -1,0 +1,5 @@
+# fix X11 keyboard layout
+setxkbmap -model pc85 -layout de -variant qwertz -option grp:alt_shift_toggle
+
+# configure key bindings
+xbindkeys
