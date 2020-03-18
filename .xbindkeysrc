@@ -66,15 +66,15 @@
 #  Control + b:2 + Release
 
 # Increase volume
-"$HOME/.local/bin/update-volume 5%+"
+"$HOME/.local/bin/update-volume.sh 5%+"
    XF86AudioRaiseVolume
 
 # Decrease volume
-"$HOME/.local/bin/update-volume 5%-"
+"$HOME/.local/bin/update-volume.sh 5%-"
    XF86AudioLowerVolume
 
 # Mute volume
-"$HOME/.local/bin/update-volume toggle"
+"$HOME/.local/bin/update-volume.sh toggle"
    XF86AudioMute
 
 # Toggle play/pause
@@ -90,11 +90,11 @@
    XF86AudioPrev
 
 # Increase backlight
-"xbacklight -inc 10"
+"$HOME/.local/bin/update-brightness.sh 5"
    XF86MonBrightnessUp
 
 # Decrease backlight
-"xbacklight -dec 10"
+"$HOME/.local/bin/update-brightness.sh -5"
    XF86MonBrightnessDown
 
 ##################################
