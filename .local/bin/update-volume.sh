@@ -1,4 +1,4 @@
-#!/bin/bash
+dunstify -a "changeVolume" -u low -i audio-volume-muted -r "$msgId" "Volume muted"#!/bin/bash
 # changeVolume
 
 getProgressString () {

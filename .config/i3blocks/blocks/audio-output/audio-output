@@ -1,0 +1,18 @@
+#! /bin/sh
+
+LABEL="${LABEL:-}"
+CURRENT_OUTPUT="$(pacmd list-cards | grep 'active profile' | grep -o 'output:[a-z0-9-]*' | cut -d':' -f2)"
+
+case "$BLOCK_BUTTON" in
+    1|2|3)
+export TERM=xterm
+OUTPUT_LIST="$(pactl list | grep -o 'output:[a-z0-9-]*' | cut -d':' -f2 | sort | uniq -d)"
+NEW_OUTPUT="$(echo "${OUTPUT_LIST}" \
+  | $HOME/.local/bin/rofi-context-choice.sh "${CURRENT_OUTPUT}")"
+pactl set-card-profile 0 output:${NEW_OUTPUT}+input:analog-stereo
+dunstify -a "changeVolume" -u low -i audio-volume-high "Audio output changed" "New output: \"${NEW_OUTPUT}\""
+CURRENT_OUTPUT=$NEW_OUTPUT
+    esac
+
+echo "$LABEL$CURRENT_OUTPUT"
+echo "$LABEL$CURRENT_OUTPUT"
