@@ -32,12 +32,12 @@ markup=none
 #
 # The type defaults to "mem" if the instance is not specified.
 [memory]
-label=MEM
+label=MEM 
 separator=false
 interval=30
 
 [memory]
-label=SWAP
+label=SWAP 
 instance=swap
 separator=true
 interval=30
