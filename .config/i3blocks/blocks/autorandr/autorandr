@@ -3,29 +3,10 @@
 LABEL="${LABEL:-}"
 
 case "$BLOCK_BUTTON" in
-    1|2)
-        date=$(date '+%A, %d. %B');;
-    3)
-        (( month == 12 )) && month=1 && year=$((year + 1)) || month=$((month + 1))
-        date=$(cal $month $year | sed -n '1s/^  *//;1s/  *$//p')
-esac
-case "$BLOCK_BUTTON" in
     1|2|3)
 export TERM=xterm
 ROFI_OUT="$(autorandr --detected \
-  | rofi \
-        -dmenu \
-        -markup-rows \
-        -no-fullscreen \
-        -hide-scrollbar \
-        -bw 2 \
-        \ #-m -3 \
-        -theme-str '#window {anchor:southeast; location:southeast; y-offset:-20;}' \
-        -eh 1 \
-        -width -22 \
-        -lines 8 \
-        -no-custom \
-        -p "$(autorandr --current)")"
+  | $HOME/.local/bin/rofi-context-choice.sh "$(autorandr --current)")"
 autorandr --load ${ROFI_OUT}
     esac
 
