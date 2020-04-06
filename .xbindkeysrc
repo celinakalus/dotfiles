@@ -65,12 +65,25 @@
 #"rxvt"
 #  Control + b:2 + Release
 
+
+# Increase volume for specific app
+"$HOME/.local/bin/update-app-volume.sh +5%"
+   alt + XF86AudioRaiseVolume
+
+# Decrease volume for specific app
+"$HOME/.local/bin/update-app-volume.sh -5%"
+   alt + XF86AudioLowerVolume
+
+# Mute volume for specific app
+"$HOME/.local/bin/update-app-volume.sh toggle"
+   alt + XF86AudioMute
+
 # Increase volume
-"$HOME/.local/bin/update-volume.sh 5%+"
+"$HOME/.local/bin/update-volume.sh +5%"
    XF86AudioRaiseVolume
 
 # Decrease volume
-"$HOME/.local/bin/update-volume.sh 5%-"
+"$HOME/.local/bin/update-volume.sh -5%"
    XF86AudioLowerVolume
 
 # Mute volume
