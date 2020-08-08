@@ -25,7 +25,7 @@ bindsym $mod+Return exec gnome-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu with [MOD]-[D]
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec rofi -show drun -show-icons
 
 # move focus between windows using [MOD]-[ARROW]
 bindsym $mod+Left focus left
@@ -103,8 +103,12 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # automatically focus urgent windows
 for_window [urgent=latest] focus
 
+for_window [class=".*"] border pixel 3
+
 # start the file explorer in tabbed container
 #for_window [class="dolphin"] focus child, layout stacked, focus
+
+for_window [window_role=volume_mixer] floating enable
 
 # reload the configuration file using [MOD]+[SHIFT]+[C]
 bindsym $mod+Shift+c reload
@@ -147,6 +151,9 @@ mode "resize" {
 # enter resize mode using [MOD]+[R]
 bindsym $mod+r mode "resize"
 
+#gaps outer 10
+gaps inner 0
+
 set $color_fg #ffffff
 set $color_active #666666
 set $color_inactive #444444
@@ -155,7 +162,9 @@ set $color_urgent #ff0000
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+        height 22
         status_command i3blocks
+        position bottom
         
         colors {
           separator #444444
