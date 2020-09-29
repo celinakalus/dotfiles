@@ -11,6 +11,8 @@
 
 set $mod Mod4
 
+bindcode --release 133 exec notify-send "henlo"
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 font pango:Source Sans Pro 8
@@ -119,10 +121,6 @@ bindsym $mod+Shift+r restart
 # enter the shutdown menu using [MOD]+[SHIFT]+[X]
 bindsym $mod+Shift+x exec "$HOME/.local/bin/shutdown-menu.sh" 
 
-# take a screenshot using [MOD]+[PRINT]
-bindsym $mod+Print exec "scrot -m $HOME/screenshot_$(date +%F-%H-%M-%S).png"
-
-
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -181,6 +179,28 @@ client.focused #66666688 #66666688 #ffffff #ffffff
 client.focused_inactive #44444488 #44444488 #ffffff #ffffff
 client.unfocused #00000088 #00000088 #aaaaaa #aaaaaa
 client.urgent #ff000088 #ff000088 #ffffff #ffffff
+
+# take a screenshot using [MOD]+[PRINT]
+bindsym $mod+Print exec "scrot -m $HOME/screenshot_$(date +%F-%H-%M-%S).png"
+
+
+# volume controls
+bindsym XF86AudioRaiseVolume --no-startup-id exec "$HOME/.local/bin/update-volume.sh +5%"
+bindsym XF86AudioLowerVolume --no-startup-id exec "$HOME/.local/bin/update-volume.sh -5%"
+bindsym XF86AudioMute --no-startup-id exec "$HOME/.local/bin/update-volume.sh toggle"
+bindsym Alt+F2 --no-startup-id exec "gnome-terminal --role=volume_mixer --hide-menubar --window -- pulsemixer"
+
+
+#player controls
+bindsym XF86AudioPlay --no-startup-id exec "playerctl -a play-pause"
+bindsym XF86AudioNext --no-startup-id exec "playerctl -a next"
+bindsym XF86AudioPrev --no-startup-id exec "playerctl -a previous"
+
+
+# brightness controls
+bindsym XF86MonBrightnessUp --no-startup-id exec "$HOME/.local/bin/update-brightness.sh 5"
+bindsym XF86MonBrightnessDown --no-startup-id exec "$HOME/.local/bin/update-brightness.sh -5"
+
 
 #exec --no-startup-id $HOME/.fehbg
 
