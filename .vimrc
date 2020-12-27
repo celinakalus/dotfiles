@@ -15,7 +15,13 @@
 " buftabline: displays all buffers in the tabline
 :Plugin 'ap/vim-buftabline'
 
+" rust.vim: adds rust support to vim
+:Plugin 'rust-lang/rust.vim'
+
 :call vundle#end()
+
+" required for rust.vim plugin
+:syntax enable
 :filetype plugin indent on
 
 " ===== NERDTREE =====
@@ -35,7 +41,6 @@
 " ===== MISC =====
 :set number
 :set ruler
-:syntax on
 
 :set backspace=indent,eol,start
 
