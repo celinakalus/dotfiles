@@ -24,6 +24,14 @@
 :syntax enable
 :filetype plugin indent on
 
+" ===== TERMINAL =====
+" use [ESC] to exit terminal as every other buffer
+:tnoremap <Esc> <C-\><C-n>
+
+" open up a terminal at the bottom of the work environment
+:autocmd vimenter * :bo :term
+":resize 10
+
 " ===== NERDTREE =====
 " always open on startup
 :autocmd vimenter * NERDTree
@@ -51,6 +59,9 @@
 :inoremap <A-DOWN> <ESC>:m .+1<CR>gi
 :vnoremap <A-UP> :m '<-2<CR>gv
 :vnoremap <A-DOWN> :m '>+1<CR>gv
+
+" autosave on leaving buffer
+:autocmd bufleave * silent! wa
 
 " ===== INDENTATION =====
 :set autoindent
@@ -105,4 +116,3 @@
 
 " ===== STATUSBAR =====
 :set laststatus=2
-
