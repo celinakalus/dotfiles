@@ -11,7 +11,7 @@
 
 set $mod Mod4
 
-bindcode --release 133 exec notify-send "henlo"
+#bindcode --release 133 exec notify-send "henlo"
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -185,21 +185,21 @@ bindsym $mod+Print exec "scrot -m $HOME/screenshot_$(date +%F-%H-%M-%S).png"
 
 
 # volume controls
-bindsym XF86AudioRaiseVolume --no-startup-id exec "$HOME/.local/bin/update-volume.sh +5%"
-bindsym XF86AudioLowerVolume --no-startup-id exec "$HOME/.local/bin/update-volume.sh -5%"
-bindsym XF86AudioMute --no-startup-id exec "$HOME/.local/bin/update-volume.sh toggle"
-bindsym Alt+F2 --no-startup-id exec "gnome-terminal --role=volume_mixer --hide-menubar --window -- pulsemixer"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "$HOME/.local/bin/update-volume.sh +5%"
+bindsym XF86AudioLowerVolume exec --no-startup-id "$HOME/.local/bin/update-volume.sh -5%"
+bindsym XF86AudioMute exec --no-startup-id "$HOME/.local/bin/update-volume.sh toggle"
+bindsym Alt+F2 exec --no-startup-id "gnome-terminal --role=volume_mixer --hide-menubar --window -- pulsemixer"
 
 
 #player controls
-bindsym XF86AudioPlay --no-startup-id exec "playerctl -a play-pause"
-bindsym XF86AudioNext --no-startup-id exec "playerctl -a next"
-bindsym XF86AudioPrev --no-startup-id exec "playerctl -a previous"
+bindsym XF86AudioPlay exec --no-startup-id "playerctl -a play-pause"
+bindsym XF86AudioNext exec --no-startup-id "playerctl -a next"
+bindsym XF86AudioPrev exec --no-startup-id "playerctl -a previous"
 
 
 # brightness controls
-bindsym XF86MonBrightnessUp --no-startup-id exec "$HOME/.local/bin/update-brightness.sh 5"
-bindsym XF86MonBrightnessDown --no-startup-id exec "$HOME/.local/bin/update-brightness.sh -5"
+bindsym XF86MonBrightnessUp exec --no-startup-id "$HOME/.local/bin/update-brightness.sh 5"
+bindsym XF86MonBrightnessDown exec --no-startup-id "$HOME/.local/bin/update-brightness.sh -5"
 
 
 #exec --no-startup-id $HOME/.fehbg
