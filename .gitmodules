@@ -7,3 +7,6 @@
 [submodule "pack/nvim-treesitter/start/nvim-treesitter"]
 	path = pack/nvim-treesitter/start/nvim-treesitter
 	url = git@github.com:nvim-treesitter/nvim-treesitter.git
+[submodule "pack/nvim-telescope/start/telescope-live-grep-args.nvim"]
+	path = pack/nvim-telescope/start/telescope-live-grep-args.nvim
+	url = git@github.com:nvim-telescope/telescope-live-grep-args.nvim.git
