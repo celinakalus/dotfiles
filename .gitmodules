@@ -19,3 +19,18 @@
 [submodule "pack/rbong/start/vim-flog"]
 	path = pack/rbong/start/vim-flog
 	url = git@github.com:rbong/vim-flog.git
+[submodule "pack/neovim/start/nvim-lspconfig"]
+	path = pack/neovim/start/nvim-lspconfig
+	url = git@github.com:neovim/nvim-lspconfig.git
+[submodule "pack/hrsh7th/start/nvim-cmp"]
+	path = pack/hrsh7th/start/nvim-cmp
+	url = git@github.com:hrsh7th/nvim-cmp.git
+[submodule "pack/hrsh7th/start/cmp-nvim-lsp"]
+	path = pack/hrsh7th/start/cmp-nvim-lsp
+	url = git@github.com:hrsh7th/cmp-nvim-lsp.git
+[submodule "pack/L3MON4D3/start/LuaSnip"]
+	path = pack/L3MON4D3/start/LuaSnip
+	url = git@github.com:L3MON4D3/LuaSnip.git
+[submodule "pack/ray-x/start/lsp_signature.nvim"]
+	path = pack/ray-x/start/lsp_signature.nvim
+	url = git@github.com:ray-x/lsp_signature.nvim.git

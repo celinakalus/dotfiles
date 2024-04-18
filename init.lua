@@ -1,7 +1,56 @@
 local telescope = require('telescope')
 local telescope_builtin = require('telescope.builtin')
+local lspconfig = require('lspconfig')
+local cmp = require('cmp')
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+local luasnip = require('luasnip')
+local lsp_signature = require('lsp_signature')
+
+cmp.setup({
+	snippet = {
+		expand = function(args)
+			require('luasnip').lsp_expand(args.body)
+		end,
+	},
+	mapping = cmp.mapping.preset.insert({
+		['<C-b>'] = cmp.mapping.scroll_docs(-4),
+		['<C-f>'] = cmp.mapping.scroll_docs(4),
+		['<C-Space>'] = cmp.mapping.complete(),
+		['<C-e>'] = cmp.mapping.abort(),
+		['<CR>'] = cmp.mapping.confirm({ select = true }),
+	}),
+	sources = cmp.config.sources({
+		{ name = 'nvim_lsp' },
+		{ name = 'luasnip' },
+	}, {
+		{ name = 'buffer' },
+	})
+})
 
 telescope.load_extension('live_grep_args')
+
+local servers = {
+	'clangd',
+	'pyright',
+	'gopls',
+	'zls',
+}
+
+local lsp_signature_cfg = {
+	bind = true,
+	handler_opts = {
+		border = "none"
+	}
+}
+
+for _, server in ipairs(servers) do
+	lspconfig[server].setup {
+		capabilities = capabilities,
+		on_attach = function(client, bufnr)
+			lsp_signature.on_attach(lsp_signature_cfg, bufnr)
+		end
+	}
+end
 
 vim.opt.listchars = {
 	eol = '↵',
