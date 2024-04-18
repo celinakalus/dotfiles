@@ -10,3 +10,6 @@
 [submodule "pack/nvim-telescope/start/telescope-live-grep-args.nvim"]
 	path = pack/nvim-telescope/start/telescope-live-grep-args.nvim
 	url = git@github.com:nvim-telescope/telescope-live-grep-args.nvim.git
+[submodule "pack/f-person/start/git-blame.nvim"]
+	path = pack/f-person/start/git-blame.nvim
+	url = git@github.com:f-person/git-blame.nvim.git
