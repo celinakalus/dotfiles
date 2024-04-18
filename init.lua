@@ -22,10 +22,15 @@ vim.opt.showcmd = true
 vim.wo.number = true
 
 vim.g.mapleader = ' '
+
+vim.keymap.set('n', '<leader>ex', ':Ex<CR>', {})
+
 vim.keymap.set('n', '<leader>ff', telescope_builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', telescope.extensions.live_grep_args.live_grep_args, {})
 vim.keymap.set('n', '<leader>fb', telescope_builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', telescope_builtin.help_tags, {})
+
+vim.keymap.set('n', '<leader>gg', ':Flog<CR>', {})
 
 vim.g.gitblame_schedule_event = CursorHold
 vim.g.gitblame_clear_event = CursorHoldI
