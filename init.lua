@@ -17,6 +17,8 @@ vim.opt.autoindent = true
 vim.opt.textwidth = 72
 vim.opt.colorcolumn = '+0'
 
+vim.opt.showcmd = true
+
 vim.wo.number = true
 
 vim.g.mapleader = ' '
@@ -27,4 +29,8 @@ vim.keymap.set('n', '<leader>fh', telescope_builtin.help_tags, {})
 
 vim.g.gitblame_schedule_event = CursorHold
 vim.g.gitblame_clear_event = CursorHoldI
+
+vim.g.flog_permanent_default_opts = {
+	format = "%as [%h] %cn: %s%d"
+}
 
