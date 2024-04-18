@@ -2,7 +2,7 @@ local telescope_builtin = require('telescope.builtin')
 
 vim.opt.listchars = {
 	eol = '↵',
-	tab = '▻ ',
+	tab = '¦ ',
 	trail = '￮' }
 
 vim.opt.list = true
