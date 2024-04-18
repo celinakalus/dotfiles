@@ -11,6 +11,9 @@ vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.autoindent = true
 
+vim.opt.textwidth = 72
+vim.opt.colorcolumn = '+0'
+
 vim.wo.number = true
 
 vim.g.mapleader = ' '
