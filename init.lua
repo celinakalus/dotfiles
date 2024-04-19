@@ -48,9 +48,14 @@ for _, server in ipairs(servers) do
 		capabilities = capabilities,
 		on_attach = function(client, bufnr)
 			lsp_signature.on_attach(lsp_signature_cfg, bufnr)
+
+			local opts = { noremap=true, silent=true, buffer = bufnr }
+			vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
+			vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
 		end
 	}
 end
+
 
 vim.opt.listchars = {
 	eol = '↵',
