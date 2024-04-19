@@ -79,7 +79,12 @@ vim.keymap.set('n', '<leader>fg', telescope.extensions.live_grep_args.live_grep_
 vim.keymap.set('n', '<leader>fb', telescope_builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', telescope_builtin.help_tags, {})
 
+vim.keymap.set('n', '<leader>gq', ':Git<CR>', {})
 vim.keymap.set('n', '<leader>gg', ':Flog<CR>', {})
+vim.keymap.set('n', '<leader>gd', ':Gdiff<CR>', {})
+vim.keymap.set('n', '<leader>ga', ':Gw<CR>', {})
+vim.keymap.set('n', '<leader>gc', ':G commit<CR>', {})
+vim.keymap.set('n', '<leader>gs', ':G commit -s<CR>', {})
 
 vim.keymap.set('n', '<C-h>', '<C-w>h', {})
 vim.keymap.set('n', '<C-j>', '<C-w>j', {})
