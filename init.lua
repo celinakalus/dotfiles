@@ -72,7 +72,7 @@ vim.wo.number = true
 
 vim.g.mapleader = ' '
 
-vim.keymap.set('n', '<leader>ex', ':Ex<CR>', {})
+vim.keymap.set('n', '<leader>fe', ':Ex<CR>', {})
 
 vim.keymap.set('n', '<leader>ff', telescope_builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', telescope.extensions.live_grep_args.live_grep_args, {})
