@@ -71,7 +71,11 @@ vim.opt.autoindent = true
 vim.opt.textwidth = 72
 vim.opt.colorcolumn = '+0'
 
+vim.opt.wrap = false
+
 vim.opt.showcmd = true
+
+vim.opt.mouse = 'a'
 
 vim.wo.number = true
 
