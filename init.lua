@@ -31,7 +31,7 @@ telescope.load_extension('live_grep_args')
 
 local servers = {
 	'clangd',
-	'pyright',
+	'pylsp',
 	'gopls',
 	'zls',
 }
