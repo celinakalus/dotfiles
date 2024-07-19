@@ -1,2 +1,5 @@
 import:
   - ~/.config/alacritty/rose-pine.yml
+
+window:
+  opacity: 0.6
