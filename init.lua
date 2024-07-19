@@ -77,6 +77,8 @@ vim.opt.showcmd = true
 
 vim.opt.mouse = 'a'
 
+vim.opt.termguicolors = false;
+
 vim.wo.number = true
 
 vim.g.mapleader = ' '
