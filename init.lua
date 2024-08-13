@@ -6,6 +6,8 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local luasnip = require('luasnip')
 local lsp_signature = require('lsp_signature')
 
+local config_dir = vim.fn.stdpath('config')
+
 cmp.setup({
 	snippet = {
 		expand = function(args)
@@ -108,4 +110,6 @@ vim.g.gitblame_clear_event = CursorHoldI
 vim.g.flog_permanent_default_opts = {
 	format = "%as [%h] %cn: %s%d"
 }
+
+vim.cmd('source ' .. config_dir .. '/syntax/global.vim')
 
