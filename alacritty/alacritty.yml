@@ -3,3 +3,8 @@ import:
 
 window:
   opacity: 0.6
+
+colors:
+  cursor:
+    text: '#101010'
+    cursor: '#ffffff'
