@@ -83,6 +83,7 @@ vim.opt.mouse = 'a'
 vim.opt.termguicolors = false;
 
 vim.wo.number = true
+vim.wo.relativenumber = true
 
 vim.g.mapleader = ' '
 
