@@ -87,13 +87,16 @@ vim.wo.relativenumber = true
 
 vim.g.mapleader = ' '
 
+-- file explorer
 vim.keymap.set('n', '<leader>fe', ':Ex<CR>', {})
 
+-- Telescope
 vim.keymap.set('n', '<leader>ff', telescope_builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', telescope.extensions.live_grep_args.live_grep_args, {})
 vim.keymap.set('n', '<leader>fb', telescope_builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', telescope_builtin.help_tags, {})
 
+-- Git integration
 vim.keymap.set('n', '<leader>gq', ':Git<CR>', {})
 vim.keymap.set('n', '<leader>gg', ':Flog -all<CR>', {})
 vim.keymap.set('n', '<leader>gd', ':Gdiff<CR>', {})
@@ -101,10 +104,23 @@ vim.keymap.set('n', '<leader>ga', ':Gw<CR>', {})
 vim.keymap.set('n', '<leader>gc', ':G commit<CR>', {})
 vim.keymap.set('n', '<leader>gs', ':G commit -s<CR>', {})
 
+-- Window navigation
 vim.keymap.set('n', '<C-h>', '<C-w>h', {})
 vim.keymap.set('n', '<C-j>', '<C-w>j', {})
 vim.keymap.set('n', '<C-k>', '<C-w>k', {})
 vim.keymap.set('n', '<C-l>', '<C-w>l', {})
+
+-- yanking/pasting
+-- p pastes from yank register,
+-- x cuts to yank register
+-- thus, d now deletes lines whereas
+-- x cuts them to be pasted later
+vim.keymap.set('n', 'p', '"0p', {})
+vim.keymap.set('n', 'P', '"0P', {})
+vim.keymap.set('v', 'p', '"0p', {})
+vim.keymap.set('v', 'P', '"0P', {})
+vim.keymap.set('n', 'x', '"0x', {})
+vim.keymap.set('v', 'x', '"0x', {})
 
 vim.g.gitblame_schedule_event = CursorHold
 vim.g.gitblame_clear_event = CursorHoldI
