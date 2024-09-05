@@ -1,20 +1,30 @@
-highlight Comment ctermfg=Green
-highlight Identifier ctermfg=LightCyan
-highlight Constant ctermfg=Cyan
-highlight Number ctermfg=Blue
-highlight String ctermfg=Red
-highlight Type ctermfg=Yellow
+highlight Comment ctermfg=Cyan
 
+highlight Constant ctermfg=Magenta
+highlight Number ctermfg=Magenta
+highlight Boolean ctermfg=Magenta
+highlight Float ctermfg=Magenta
+highlight String ctermfg=Magenta
+
+highlight Type ctermfg=LightGreen
 highlight cType ctermfg=LightGreen
 highlight Typedef ctermfg=LightGreen
 highlight Struct ctermfg=LightGreen
 highlight StorageClass ctermfg=LightGreen
 
-highlight Statement cterm=bold ctermfg=Magenta
-highlight PreProc cterm=bold ctermfg=Magenta
-highlight Include cterm=bold ctermfg=Magenta
-highlight Define cterm=bold ctermfg=Magenta
-highlight PreCondit cterm=bold ctermfg=Magenta
-highlight Conditional cterm=bold ctermfg=Magenta
-highlight Repeat cterm=bold ctermfg=Magenta
-highlight Operator ctermfg=Magenta
+highlight Identifier ctermfg=LightCyan
+highlight Function ctermfg=Yellow
+
+highlight Statement cterm=bold ctermfg=Yellow
+highlight Conditional cterm=bold ctermfg=Yellow
+highlight Repeat cterm=bold ctermfg=Yellow
+highlight Label cterm=bold ctermfg=Yellow
+highlight Operator ctermfg=Yellow
+
+highlight PreProc ctermfg=LightBlue
+highlight Include ctermfg=LightBlue
+highlight Define ctermfg=LightBlue
+highlight PreCondit ctermfg=LightBlue
+
+highlight Todo ctermfg=Red
+highlight Error ctermfg=Red
