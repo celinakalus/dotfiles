@@ -1,3 +1,6 @@
 [submodule "nvim"]
 	path = nvim
 	url = git@github.com:celinakalus/nvim.git
+[submodule "tmux/plugins/rose-pine"]
+	path = tmux/plugins/rose-pine
+	url = git@github.com:rose-pine/tmux.git
