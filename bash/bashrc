@@ -20,6 +20,9 @@ alias nv='nvim'
 source ${XDG_CONFIG_HOME:-$HOME/.config}/bash/git-prompt.sh
 PS1='\[\e[93m\]\u\[\e[0m\]@\[\e[94m\]\h \[\e[92m\]\w\[\e[91m\]$(__git_ps1) \[\e[m\]\n\$ '
 
+# tmux-sessionizer
+source ${XDG_CONFIG_HOME:-$HOME/.config}/bash/tmux-sessionizer.sh
+
 # motd
 shopt -q login_shell || cat ${XDG_CONFIG_HOME:-$HOME/.config}/bash/motd
 
