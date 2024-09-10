@@ -55,6 +55,7 @@ for _, server in ipairs(servers) do
 			vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
 			vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
 			vim.keymap.set('n', '<leader>re', vim.lsp.buf.rename, {})
+			vim.keymap.set('n', '<leader>rf', vim.lsp.buf.references, {})
 		end
 	}
 end
