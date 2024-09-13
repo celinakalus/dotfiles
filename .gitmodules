@@ -37,3 +37,6 @@
 [submodule "pack/rose-pine/start/rose-pine"]
 	path = pack/rose-pine/start/rose-pine
 	url = git@github.com:rose-pine/neovim.git
+[submodule "pack/nvim-treesitter/start/nvim-treesitter-context"]
+	path = pack/nvim-treesitter/start/nvim-treesitter-context
+	url = git@github.com:nvim-treesitter/nvim-treesitter-context.git

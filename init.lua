@@ -5,11 +5,29 @@ local cmp = require('cmp')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local luasnip = require('luasnip')
 local lsp_signature = require('lsp_signature')
+local ts = require('nvim-treesitter')
+local ts_conf = require('nvim-treesitter.configs')
+local ts_ctx = require('treesitter-context')
 local rose_pine = require('rose-pine')
 local palette = require('rose-pine.palette')
 
 local config_dir = vim.fn.stdpath('config')
 
+-- treesitter
+ts_conf.setup({
+	ensure_installed = all,
+	highlight = {
+		enable = true
+	}
+})
+
+-- treesitter-context
+ts_ctx.setup({
+	enable = true,
+	mode = 'topline',
+})
+
+-- completion
 cmp.setup({
 	snippet = {
 		expand = function(args)
