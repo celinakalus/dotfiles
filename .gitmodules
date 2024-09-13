@@ -34,3 +34,6 @@
 [submodule "pack/ray-x/start/lsp_signature.nvim"]
 	path = pack/ray-x/start/lsp_signature.nvim
 	url = git@github.com:ray-x/lsp_signature.nvim.git
+[submodule "pack/rose-pine/start/rose-pine"]
+	path = pack/rose-pine/start/rose-pine
+	url = git@github.com:rose-pine/neovim.git

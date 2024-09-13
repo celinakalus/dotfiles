@@ -5,6 +5,8 @@ local cmp = require('cmp')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local luasnip = require('luasnip')
 local lsp_signature = require('lsp_signature')
+local rose_pine = require('rose-pine')
+local palette = require('rose-pine.palette')
 
 local config_dir = vim.fn.stdpath('config')
 
@@ -130,5 +132,23 @@ vim.g.flog_permanent_default_opts = {
 	format = "%as [%h] %cn: %s%d"
 }
 
-vim.cmd('source ' .. config_dir .. '/syntax/global.vim')
+-- rose-pine color scheme
+-- needs to happen at the end, otherwise bad things happen
+rose_pine.setup({
+	variant = "auto",
+	enable = {
+		terminal = true
+	},
+	styles = {
+		bold = true,
+		italic = false,
+		transparency = true
+	},
+	highlight_groups = {
+		TreesitterContext = { bg = "surface" }
+	},
+	disable_background = true
+})
+
+vim.cmd.colorscheme("rose-pine")
 
