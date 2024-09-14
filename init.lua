@@ -10,6 +10,8 @@ local ts_conf = require('nvim-treesitter.configs')
 local ts_ctx = require('treesitter-context')
 local rose_pine = require('rose-pine')
 local palette = require('rose-pine.palette')
+local plenary = require('plenary')
+local harpoon = require('harpoon')
 
 local config_dir = vim.fn.stdpath('config')
 
@@ -49,8 +51,7 @@ cmp.setup({
 	})
 })
 
-telescope.load_extension('live_grep_args')
-
+-- LSP
 local servers = {
 	'clangd',
 	'pylsp',
@@ -80,7 +81,13 @@ for _, server in ipairs(servers) do
 	}
 end
 
+-- harpoon
+harpoon.setup()
 
+-- Telescope
+telescope.load_extension('live_grep_args')
+
+-- settings
 vim.opt.listchars = {
 	eol = '↵',
 	tab = '¦ ',
@@ -111,7 +118,16 @@ vim.g.mapleader = ' '
 -- file explorer
 vim.keymap.set('n', '<leader>fe', ':Ex<CR>', {})
 
--- Telescope
+-- harpoon
+vim.keymap.set("n", "<leader>ha", function() harpoon:list():add() end)
+vim.keymap.set("n", "<leader>hh", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+
+vim.keymap.set("n", "<C-s>", function() harpoon:list():select(1) end)
+vim.keymap.set("n", "<C-e>", function() harpoon:list():select(2) end)
+vim.keymap.set("n", "<C-c>", function() harpoon:list():select(3) end)
+vim.keymap.set("n", "<C-g>", function() harpoon:list():select(4) end)
+
+-- telescope
 vim.keymap.set('n', '<leader>ff', telescope_builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', telescope.extensions.live_grep_args.live_grep_args, {})
 vim.keymap.set('n', '<leader>fb', telescope_builtin.buffers, {})
