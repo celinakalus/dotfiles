@@ -7,3 +7,6 @@
 !bash/*
 !alacritty/*
 !tmux/*
+!sway/*
+!mako/*
+!waybar/*

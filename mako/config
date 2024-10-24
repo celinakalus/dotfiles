@@ -1,0 +1,60 @@
+
+### Display ###
+
+# Set {width}x{height} and {x_pos}+{y_pos}
+width=400
+height=140
+outer-margin=40,20
+margin=0
+# Text and seperator padding
+padding=12,18
+# Width of frame around window
+border-size=0
+# Color of frame around window
+border-color=#4287f5A0
+anchor=top-right
+default-timeout=10000
+
+### Text ###
+
+# Set font of notifications
+font=NotoSansM Nerd Font 12
+# Spacing between lines 
+# Markup parsing
+markup=1
+# Message format:
+# %a - appname
+# %s - summary
+# %b - body
+# %i - iconname (with path)
+# %I - iconname (without path)
+# %p - progress value (if set)
+# %n - progress value no extra characters
+# %% - literal %
+format=<b>%a</b>\n<i>%s</i>\n%b
+# Align message text horizontally
+text-alignment=left
+
+### Icons ###
+
+icons=1
+max-icon-size=96
+icon-location=left
+
+### History ###
+
+# Length of history
+history=1
+max-history=20
+
+# Corner radius of dunst
+background-color=#26233a80
+text-color=#ffffff
+
+[urgency=critical]
+
+# High urgency notifications
+background-color=#ebbcba80
+text-color=#ffffff
+default-timeout=0
+ignore-timeout=1

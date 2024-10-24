@@ -1,0 +1,3 @@
+# intelligently choose which configuration to use
+include "$HOME/.config/sway/`sway --version | cut -d' ' -f 1`.conf"
+
