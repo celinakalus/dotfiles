@@ -1,3 +1,7 @@
-# intelligently choose which configuration to use
+# loads either the sway- or swayfx-config, depending on which is used.
 include "$HOME/.config/sway/`sway --version | cut -d' ' -f 1`.conf"
+
+# loads config corresponding to the hostname. seems not to fail when
+# file does not exist.
+include "$HOME/.config/sway/`uname -n`.conf"
 
