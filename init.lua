@@ -57,6 +57,8 @@ local servers = {
 	'pylsp',
 	'gopls',
 	'zls',
+	'tsserver',
+	'cssls',
 }
 
 local lsp_signature_cfg = {
