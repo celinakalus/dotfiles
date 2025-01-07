@@ -59,6 +59,7 @@ local servers = {
 	'zls',
 	'tsserver',
 	'cssls',
+	'rust_analyzer',
 }
 
 local lsp_signature_cfg = {
