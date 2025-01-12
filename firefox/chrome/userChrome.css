@@ -1,0 +1,26 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/*
+ * 1. Set in about:config:
+ *   - gfx.webrender.all = true
+ *   - browser.tabs.allow_transparent_browser = true
+ *   - toolkit.legacyUserProfileCustomizations.stylesheets = true
+ *
+ * 2. Navigate to UserProfile folder (see about:support)
+ *
+ * 3. Create chrome/userChrome.css and chrome/userContent.css
+ * */
+
+window,
+#main-window,
+#toolbar-menubar,
+#TabsToolbar,
+#PersonalToolbar,
+#navigator-toolbox,
+#sidebar-box
+{
+	color: #ffffff !important;
+	background-color: #26233a60 !important;
+	-moz-appearance: none !important;
+	background-image: none !important;
+}

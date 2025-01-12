@@ -10,3 +10,5 @@
 !sway/*
 !mako/*
 !waybar/*
+!firefox/*
+!firefox/chrome/*
