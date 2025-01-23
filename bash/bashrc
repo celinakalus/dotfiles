@@ -29,3 +29,11 @@ shopt -q login_shell || cat ${XDG_CONFIG_HOME:-$HOME/.config}/bash/motd
 # local install location
 export PATH="${PATH}:$HOME/.local/bin"
 
+# start ssh-agent if necessary
+ps -C ssh-agent > /dev/null \
+&& ( \
+	echo "ssh-agent already started" \
+) || ( \
+	echo "Starting ssh-agent" && \
+	eval $(ssh-agent) \
+)
