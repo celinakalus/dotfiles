@@ -43,3 +43,6 @@
 [submodule "pack/ThePrimeagen/start/harpoon"]
 	path = pack/ThePrimeagen/start/harpoon
 	url = git@github.com:ThePrimeagen/harpoon.git
+[submodule "pack/hat0uma/start/csvview.nvim"]
+	path = pack/hat0uma/start/csvview.nvim
+	url = git@github.com:hat0uma/csvview.nvim

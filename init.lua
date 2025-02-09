@@ -12,6 +12,7 @@ local rose_pine = require('rose-pine')
 local palette = require('rose-pine.palette')
 local plenary = require('plenary')
 local harpoon = require('harpoon')
+local csvview = require('csvview')
 
 local config_dir = vim.fn.stdpath('config')
 
@@ -86,6 +87,9 @@ end
 
 -- harpoon
 harpoon.setup()
+
+-- csvview
+csvview.setup()
 
 -- Telescope
 telescope.load_extension('live_grep_args')
