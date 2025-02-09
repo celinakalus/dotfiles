@@ -13,6 +13,7 @@ local palette = require('rose-pine.palette')
 local plenary = require('plenary')
 local harpoon = require('harpoon')
 local csvview = require('csvview')
+local undotree = require('undotree')
 
 local config_dir = vim.fn.stdpath('config')
 
@@ -91,6 +92,9 @@ harpoon.setup()
 -- csvview
 csvview.setup()
 
+-- undotree
+undotree.setup()
+
 -- Telescope
 telescope.load_extension('live_grep_args')
 
@@ -138,6 +142,8 @@ vim.keymap.set("n", "<A-S-s>", function() harpoon:list():replace_at(1) end)
 vim.keymap.set("n", "<A-S-e>", function() harpoon:list():replace_at(2) end)
 vim.keymap.set("n", "<A-S-c>", function() harpoon:list():replace_at(3) end)
 vim.keymap.set("n", "<A-S-g>", function() harpoon:list():replace_at(4) end)
+-- undotree
+vim.keymap.set('n', '<leader>ut', undotree.toggle, { noremap = true, silent = true })
 
 -- telescope
 vim.keymap.set('n', '<leader>ff', telescope_builtin.find_files, {})

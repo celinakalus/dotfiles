@@ -46,3 +46,6 @@
 [submodule "pack/hat0uma/start/csvview.nvim"]
 	path = pack/hat0uma/start/csvview.nvim
 	url = git@github.com:hat0uma/csvview.nvim
+[submodule "pack/jiaoshijie/start/undotree"]
+	path = pack/jiaoshijie/start/undotree
+	url = git@github.com:jiaoshijie/undotree.git
