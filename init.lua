@@ -133,15 +133,11 @@ vim.keymap.set('n', '<leader>fe', ':Ex<CR>', {})
 vim.keymap.set("n", "<leader>ha", function() harpoon:list():add() end)
 vim.keymap.set("n", "<leader>hh", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
-vim.keymap.set("n", "<A-s>", function() harpoon:list():select(1) end)
-vim.keymap.set("n", "<A-e>", function() harpoon:list():select(2) end)
-vim.keymap.set("n", "<A-c>", function() harpoon:list():select(3) end)
-vim.keymap.set("n", "<A-g>", function() harpoon:list():select(4) end)
+for i=1,9 do
+	vim.keymap.set("n", string.format("<leader>%i", i), function() harpoon:list():select(i) end)
+	vim.keymap.set("n", string.format("<leader>x%i", i), function() harpoon:list():replace_at(i) end)
+end
 
-vim.keymap.set("n", "<A-S-s>", function() harpoon:list():replace_at(1) end)
-vim.keymap.set("n", "<A-S-e>", function() harpoon:list():replace_at(2) end)
-vim.keymap.set("n", "<A-S-c>", function() harpoon:list():replace_at(3) end)
-vim.keymap.set("n", "<A-S-g>", function() harpoon:list():replace_at(4) end)
 -- undotree
 vim.keymap.set('n', '<leader>ut', undotree.toggle, { noremap = true, silent = true })
 
