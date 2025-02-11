@@ -18,7 +18,7 @@ tmux_sessionizer() {
 	if [[ -z $TMUX ]]; then
 		TMUX_CALL="tmux new-session -As $selected_name -c $selected"
 	elif ! tmux has-session -t $selected_name 2> /dev/null; then
-		TMUX_CALL="tmux new-session -ds $selected_name -c $selected && tmux switch-client -t $selected_name"
+		TMUX_CALL="tmux new-session -ds $selected_name -c $selected; tmux switch-client -t $selected_name"
 	else
 		TMUX_CALL="tmux switch-client -t $selected_name"
 	fi
