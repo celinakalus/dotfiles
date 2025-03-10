@@ -62,6 +62,7 @@ local servers = {
 	'tsserver',
 	'cssls',
 	'rust_analyzer',
+	'cmake',
 }
 
 local lsp_signature_cfg = {
