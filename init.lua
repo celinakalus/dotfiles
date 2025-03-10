@@ -133,6 +133,7 @@ vim.keymap.set('n', '<leader>fe', ':Ex<CR>', {})
 -- harpoon
 vim.keymap.set("n", "<leader>ha", function() harpoon:list():add() end)
 vim.keymap.set("n", "<leader>hh", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+vim.keymap.set("n", "<leader>hc", function() harpoon:list():clear() end)
 
 for i=1,9 do
 	vim.keymap.set("n", string.format("<leader>%i", i), function() harpoon:list():select(i) end)
