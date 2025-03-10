@@ -1,0 +1,6 @@
+#!/bin/sh
+
+echo "Syncing with mbsync..."
+
+mbsync -aq && echo "done."
+
