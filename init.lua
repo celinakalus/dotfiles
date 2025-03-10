@@ -111,7 +111,7 @@ vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.autoindent = true
 
-vim.opt.textwidth = 72
+vim.opt.textwidth = 80
 vim.opt.colorcolumn = '+0'
 
 vim.opt.wrap = false
