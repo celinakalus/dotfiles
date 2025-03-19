@@ -1,6 +1,54 @@
-[submodule "nvim"]
-	path = nvim
-	url = git@github.com:celinakalus/nvim.git
 [submodule "tmux/plugins/rose-pine"]
 	path = tmux/plugins/rose-pine
 	url = git@github.com:rose-pine/tmux.git
+[submodule "nvim/pack/nvim-lua/start/plenary.nvim"]
+	path = nvim/pack/nvim-lua/start/plenary.nvim
+	url = git@github.com:nvim-lua/plenary.nvim.git
+[submodule "nvim/pack/nvim-telescope/start/telescope.nvim"]
+	path = nvim/pack/nvim-telescope/start/telescope.nvim
+	url = git@github.com:nvim-telescope/telescope.nvim.git
+[submodule "nvim/pack/nvim-treesitter/start/nvim-treesitter"]
+	path = nvim/pack/nvim-treesitter/start/nvim-treesitter
+	url = git@github.com:nvim-treesitter/nvim-treesitter.git
+[submodule "nvim/pack/nvim-telescope/start/telescope-live-grep-args.nvim"]
+	path = nvim/pack/nvim-telescope/start/telescope-live-grep-args.nvim
+	url = git@github.com:nvim-telescope/telescope-live-grep-args.nvim.git
+[submodule "nvim/pack/f-person/start/git-blame.nvim"]
+	path = nvim/pack/f-person/start/git-blame.nvim
+	url = git@github.com:f-person/git-blame.nvim.git
+[submodule "nvim/pack/tpope/start/vim-fugitive"]
+	path = nvim/pack/tpope/start/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git
+[submodule "nvim/pack/rbong/start/vim-flog"]
+	path = nvim/pack/rbong/start/vim-flog
+	url = git@github.com:rbong/vim-flog.git
+[submodule "nvim/pack/neovim/start/nvim-lspconfig"]
+	path = nvim/pack/neovim/start/nvim-lspconfig
+	url = git@github.com:neovim/nvim-lspconfig.git
+[submodule "nvim/pack/hrsh7th/start/nvim-cmp"]
+	path = nvim/pack/hrsh7th/start/nvim-cmp
+	url = git@github.com:hrsh7th/nvim-cmp.git
+[submodule "nvim/pack/hrsh7th/start/cmp-nvim-lsp"]
+	path = nvim/pack/hrsh7th/start/cmp-nvim-lsp
+	url = git@github.com:hrsh7th/cmp-nvim-lsp.git
+[submodule "nvim/pack/L3MON4D3/start/LuaSnip"]
+	path = nvim/pack/L3MON4D3/start/LuaSnip
+	url = git@github.com:L3MON4D3/LuaSnip.git
+[submodule "nvim/pack/ray-x/start/lsp_signature.nvim"]
+	path = nvim/pack/ray-x/start/lsp_signature.nvim
+	url = git@github.com:ray-x/lsp_signature.nvim.git
+[submodule "nvim/pack/rose-pine/start/rose-pine"]
+	path = nvim/pack/rose-pine/start/rose-pine
+	url = git@github.com:rose-pine/neovim.git
+[submodule "nvim/pack/nvim-treesitter/start/nvim-treesitter-context"]
+	path = nvim/pack/nvim-treesitter/start/nvim-treesitter-context
+	url = git@github.com:nvim-treesitter/nvim-treesitter-context.git
+[submodule "nvim/pack/ThePrimeagen/start/harpoon"]
+	path = nvim/pack/ThePrimeagen/start/harpoon
+	url = git@github.com:ThePrimeagen/harpoon.git
+[submodule "nvim/pack/hat0uma/start/csvview.nvim"]
+	path = nvim/pack/hat0uma/start/csvview.nvim
+	url = git@github.com:hat0uma/csvview.nvim
+[submodule "nvim/pack/jiaoshijie/start/undotree"]
+	path = nvim/pack/jiaoshijie/start/undotree
+	url = git@github.com:jiaoshijie/undotree.git
