@@ -2,7 +2,7 @@
 	"exclusive": false,
 	"position": "bottom",
 
-	"modules-left": ["clock", "network", "custom/keyboard"],
+	"modules-left": ["clock", "network", "bluetooth", "custom/keyboard"],
 	"modules-center": ["sway/workspaces", "sway/mode"],
 	"modules-right": ["tray", "cpu", "memory", "battery", "custom/power"],
 
@@ -27,6 +27,11 @@
 		"format-ethernet": "  {ifname}",
 		"format-disconnected": " ", 
 		"max-length": 50,
+	},
+	"bluetooth": {
+		"format": "󰂲 ",
+		"format-connected": " {device_alias}",
+		"on-click": "alacritty --class launcher -e bluetoothctl"
 	},
 	"tray": {
 		"icon-size": 15,
