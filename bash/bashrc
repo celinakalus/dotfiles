@@ -23,6 +23,13 @@ PS1='\[\e[93m\]\u\[\e[0m\]@\[\e[94m\]\h \[\e[92m\]\w\[\e[91m\]$(__git_ps1) \[\e[
 # tmux-sessionizer
 source ${XDG_CONFIG_HOME:-$HOME/.config}/bash/tmux-sessionizer.sh
 
+# fzf
+if [ -f "/usr/share/doc/fzf/examples/key-bindings.bash" ]; then
+	source "/usr/share/doc/fzf/examples/key-bindings.bash"
+else
+	eval "$(fzf --bash 2>/dev/null)"
+fi
+
 # motd
 shopt -q login_shell || cat ${XDG_CONFIG_HOME:-$HOME/.config}/bash/motd
 
