@@ -59,7 +59,7 @@ local servers = {
 	'pylsp',
 	'gopls',
 	'zls',
-	'tsserver',
+	'ts_ls',
 	'cssls',
 	'rust_analyzer',
 	'cmake',
