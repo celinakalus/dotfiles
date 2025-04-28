@@ -2,7 +2,7 @@
 	"exclusive": false,
 	"position": "bottom",
 
-	"modules-left": ["clock", "network", "bluetooth", "custom/keyboard"],
+	"modules-left": ["clock", "network", "bluetooth", "custom/keyboard", "custom/screencap"],
 	"modules-center": ["sway/workspaces", "sway/mode"],
 	"modules-right": ["tray", "cpu", "memory", "battery", "custom/power"],
 
@@ -48,5 +48,9 @@
 	"custom/keyboard": {
 		"format": "⌨ ",
 		"on-click": "pkill -SIGRTMIN wvkbd-mobintl"
+	},
+	"custom/screencap": {
+		"format": "📷 ",
+		"on-click": "bash -c \"grim -g '$(slurp)' - | wl-copy\""
 	},
 }

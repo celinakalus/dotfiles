@@ -61,6 +61,7 @@ window#waybar {
 #custom-power,
 #custom-menu,
 #custom-keyboard,
+#custom-screencap,
 #custom-launcher,
 #idle_inhibitor {
 	margin: 0 2px 0;
@@ -80,11 +81,10 @@ window#waybar {
 #battery.charging {
     color: @gold;
 }
-#battery.warning:not(.charging) {
-	color: @highlightMed;
-}
+#battery.warning:not(.charging),
 #battery.critical:not(.charging) {
-    color: @highlightHigh;
+	color: @text;
+	background-color: @love;
 }
 #temperature.critical {
     color: @highlightHigh;
