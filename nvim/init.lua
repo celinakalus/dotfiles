@@ -14,6 +14,7 @@ local plenary = require('plenary')
 local harpoon = require('harpoon')
 local csvview = require('csvview')
 local undotree = require('undotree')
+local comment = require('Comment')
 
 local config_dir = vim.fn.stdpath('config')
 
@@ -98,6 +99,9 @@ undotree.setup()
 
 -- Telescope
 telescope.load_extension('live_grep_args')
+
+-- shortcuts for (un-)commenting
+comment.setup()
 
 -- settings
 vim.opt.listchars = {

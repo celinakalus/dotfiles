@@ -52,3 +52,6 @@
 [submodule "nvim/pack/jiaoshijie/start/undotree"]
 	path = nvim/pack/jiaoshijie/start/undotree
 	url = git@github.com:jiaoshijie/undotree.git
+[submodule "nvim/pack/numToStr/start/Comment.nvim"]
+	path = nvim/pack/numToStr/start/Comment.nvim
+	url = git@github.com:numToStr/Comment.nvim.git
