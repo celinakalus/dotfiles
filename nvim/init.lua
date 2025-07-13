@@ -64,6 +64,7 @@ local servers = {
 	'cssls',
 	'rust_analyzer',
 	'cmake',
+	'tinymist',
 }
 
 local lsp_signature_cfg = {
