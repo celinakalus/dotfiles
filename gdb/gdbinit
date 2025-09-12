@@ -1,0 +1,20 @@
+set history save on
+set history size 10000
+set history file ~/.gdb_history
+
+# Taken from https://gitlab.com/ft/etc-gnu-toolchain
+#
+# The python interpreter in gdb does not pick up on module paths set up by
+# environments such as python's virtual-environments. This runs the system's
+# python interpreter within the current execution environment, and adds its
+# load-path to the interpreter within gdb.
+python
+import os,subprocess,sys
+print("Loading load-path from system python...")
+__code=[ 'import os,sys',
+         'print(os.linesep.join(sys.path).strip())' ]
+__proc = 'python -c "' + ';'.join(__code) + '"'
+paths = subprocess.check_output(__proc, shell=True).decode("utf-8").split()
+sys.path.extend(paths)
+end
+

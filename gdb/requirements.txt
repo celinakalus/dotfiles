@@ -1,0 +1,4 @@
+arm-gdb @ git+https://github.com/celinakalus/arm_gdb.git@54136480fc36ba464f41ec7a73f1fd8dc0f7bad2
+cmsis-svd==0.6
+lxml==6.0.1
+six==1.17.0

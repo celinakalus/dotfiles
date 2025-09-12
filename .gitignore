@@ -13,3 +13,4 @@
 !notmuch/**/*
 !firefox/*
 !firefox/chrome/*
+!gdb/*

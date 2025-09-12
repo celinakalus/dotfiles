@@ -12,6 +12,30 @@ man() {
   command man "$@"
 }
 
+# Starts a gdb session with arm-gdb and cmsis-svd loaded from a python venv.
+# This allows for inspection of MCU-specific registers from GDB.
+#
+# See also:
+# - https://github.com/pengi/arm_gdb
+# - https://github.com/cmsis-svd/cmsis-svd-data
+arm-gdb() {
+	GDB_CONF_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/gdb/"
+	GDB_VENV="${GDB_VENV:-$HOME/.local/venv/arm-gdb/}"
+	GDB_VENV_ACTIVATE="$GDB_VENV/bin/activate"
+
+	if [ -f "$GDB_VENV_ACTIVATE" ]; then
+		echo "Activating python venv: '$GDB_VENV'"
+		. "$GDB_VENV_ACTIVATE"
+		gdb-multiarch \
+			--directory="$GDB_CONF_DIR" \
+			--eval-command="source cm.conf" \
+			"$@"
+	else
+		echo "No python venv found at '$GDB_VENV'."
+		return 1
+	fi
+}
+
 # no more old vim
 alias vim='nvim'
 alias nv='nvim'
